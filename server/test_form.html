@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Form Submission - Ocean Grace</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #1a472a, #243352);
+            color: white;
+        }
+        .container {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        button {
+            background: #1a472a;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px;
+        }
+        button:hover {
+            background: #0f3419;
+        }
+        .result {
+            background: rgba(255,255,255,0.2);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            font-family: monospace;
+        }
+        .success { border-left: 4px solid #4CAF50; }
+        .error { border-left: 4px solid #f44336; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌊 Ocean Grace - Form Test</h1>
+        <p>Testing form submission dan connection ke admin panel</p>
+        
+        <button onclick="testSubmitForm()">🚀 Test Submit Form</button>
+        <button onclick="testLoadAdmin()">👥 Test Load Admin Data</button>
+        <button onclick="clearTestData()">🗑️ Clear Test Data</button>
+        
+        <div id="results"></div>
+    </div>
+
+    <script>
+        async function testSubmitForm() {
+            const results = document.getElementById('results');
+            results.innerHTML = '<div class="result">Testing form submission...</div>';
+            
+            const testData = {
+                nama: 'Test User ' + Date.now(),
+                email: 'test' + Date.now() + '@oceanrace.com',
+                telepon: '08123456789',
+                tanggal: '2025-08-01',
+                waktu: '19:00',
+                jumlah: 4,
+                area: 'Terrace',
+                chef_menu: 1,
+                live_performance: 0,
+                sunset_terrace: 1,
+                private_gazebo: 0,
+                catatan: 'Test reservation from automated test'
+            };
+            
+            try {
+                console.log('Sending test data:', testData);
+                
+                const response = await fetch('api_file_storage.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json',
+                    },
+                    body: JSON.stringify(testData)
+                });
+                
+                const result = await response.json();
+                console.log('Response:', result);
+                
+                if (result.success) {
+                    results.innerHTML += '<div class="result success">✅ SUCCESS: ' + result.message + ' (ID: ' + result.id + ')</div>';
+                } else {
+                    results.innerHTML += '<div class="result error">❌ ERROR: ' + result.message + '</div>';
+                }
+                
+            } catch (error) {
+                results.innerHTML += '<div class="result error">❌ NETWORK ERROR: ' + error.message + '</div>';
+                console.error('Error:', error);
+            }
+        }
+        
+        async function testLoadAdmin() {
+            const results = document.getElementById('results');
+            results.innerHTML += '<div class="result">Testing admin data loading...</div>';
+            
+            try {
+                const response = await fetch('api_file_storage.php', {
+                    method: 'GET'
+                });
+                
+                const result = await response.json();
+                console.log('Admin data:', result);
+                
+                if (result.success) {
+                    results.innerHTML += '<div class="result success">✅ ADMIN DATA LOADED: ' + result.count + ' reservations found</div>';
+                    
+                    if (result.data.length > 0) {
+                        const latest = result.data[result.data.length - 1];
+                        results.innerHTML += '<div class="result">Latest reservation: ' + latest.nama + ' (' + latest.tanggal + ')</div>';
+                    }
+                } else {
+                    results.innerHTML += '<div class="result error">❌ ADMIN ERROR: ' + result.message + '</div>';
+                }
+                
+            } catch (error) {
+                results.innerHTML += '<div class="result error">❌ ADMIN NETWORK ERROR: ' + error.message + '</div>';
+            }
+        }
+        
+        async function clearTestData() {
+            if (confirm('Are you sure you want to clear all test data?')) {
+                try {
+                    // This would need a separate endpoint to clear data
+                    const response = await fetch('clear_test_data.php', {
+                        method: 'POST'
+                    });
+                    
+                    document.getElementById('results').innerHTML = '<div class="result">Test data cleared (if endpoint exists)</div>';
+                } catch (error) {
+                    document.getElementById('results').innerHTML = '<div class="result">Clear endpoint not available</div>';
+                }
+            }
+        }
+        
+        // Auto-test on load
+        window.onload = function() {
+            setTimeout(testSubmitForm, 1000);
+        };
+    </script>
+</body>
+</html>

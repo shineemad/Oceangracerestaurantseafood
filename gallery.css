@@ -1,0 +1,624 @@
+.gallery {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.gallery .div {
+  background-color: #ffffff;
+  overflow: hidden;
+  width: 1920px;
+  height: 6452px;
+  position: relative;
+}
+
+.gallery .group {
+  position: absolute;
+  width: 732px;
+  height: 660px;
+  top: 1290px;
+  left: 596px;
+}
+
+.gallery .headlineutama {
+  width: 358px;
+  top: 0;
+  left: 185px;
+  color: #243352;
+  font-size: 75.8px;
+  text-align: center;
+  letter-spacing: -3.79px;
+  line-height: 75.8px;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+}
+
+.gallery .group-2 {
+  position: absolute;
+  width: 734px;
+  height: 45px;
+  top: 615px;
+  left: 0;
+}
+
+.gallery .text-wrapper {
+  width: 85px;
+  height: 45px;
+  top: 0;
+  left: 328px;
+  color: #243352;
+  font-size: 42.7px;
+  text-align: center;
+  letter-spacing: -2.13px;
+  line-height: 75.8px;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+}
+
+.gallery .headlineutama-2 {
+  width: 168px;
+  height: 45px;
+  top: 0;
+  left: 0;
+  color: #243352;
+  font-size: 42.7px;
+  text-align: center;
+  letter-spacing: -2.13px;
+  line-height: 75.8px;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+}
+
+.gallery .headlineutama-3 {
+  width: 121px;
+  height: 45px;
+  top: 0;
+  left: 607px;
+  color: #243352;
+  font-size: 42.7px;
+  text-align: center;
+  letter-spacing: -2.13px;
+  line-height: 75.8px;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+}
+
+.gallery .p {
+  position: absolute;
+  width: 650px;
+  top: 206px;
+  left: 39px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #243352;
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 36px;
+}
+
+.gallery .group-3 {
+  position: absolute;
+  width: 1204px;
+  height: 857px;
+  top: 2271px;
+  left: 360px;
+}
+
+.gallery .pexels-patrick-leung {
+  position: absolute;
+  width: 285px;
+  height: 508px;
+  top: 224px;
+  left: 0;
+}
+
+.gallery .img {
+  top: 224px;
+  left: 305px;
+  object-fit: cover;
+  position: absolute;
+  width: 285px;
+  height: 508px;
+}
+
+.gallery .pexels-patrick-leung-2 {
+  top: 224px;
+  left: 610px;
+  position: absolute;
+  width: 285px;
+  height: 508px;
+}
+
+.gallery .pexels-patrick-leung-3 {
+  top: 224px;
+  left: 915px;
+  position: absolute;
+  width: 285px;
+  height: 508px;
+}
+
+.gallery .headlineutama-4 {
+  width: 491px;
+  top: 56px;
+  left: 355px;
+  color: #243352;
+  font-size: 56.9px;
+  text-align: center;
+  letter-spacing: -2.84px;
+  line-height: 56.9px;
+  position: absolute;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+}
+
+.gallery .text-wrapper-2 {
+  position: absolute;
+  width: 647px;
+  top: 783px;
+  left: 277px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #243352;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 25.2px;
+}
+
+.gallery .group-4 {
+  position: absolute;
+  width: 349px;
+  height: 25px;
+  top: 0;
+  left: 423px;
+}
+
+.gallery .group-wrapper {
+  position: absolute;
+  width: 1200px;
+  height: 857px;
+  top: 3351px;
+  left: 360px;
+}
+
+.gallery .group-5 {
+  position: relative;
+  width: 1204px;
+  height: 857px;
+}
+
+.gallery .pexels-patrick-leung-4 {
+  top: 224px;
+  left: 305px;
+  position: absolute;
+  width: 285px;
+  height: 508px;
+}
+
+.gallery .headlineutama-5 {
+  width: 533px;
+  top: 56px;
+  left: 334px;
+  color: #243352;
+  font-size: 56.9px;
+  text-align: center;
+  letter-spacing: -2.84px;
+  line-height: 56.9px;
+  position: absolute;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+}
+
+.gallery .group-6 {
+  position: absolute;
+  width: 1204px;
+  height: 858px;
+  top: 4431px;
+  left: 360px;
+}
+
+.gallery .pexels-patrick-leung-5 {
+  top: 225px;
+  left: 0;
+  position: absolute;
+  width: 285px;
+  height: 508px;
+}
+
+.gallery .pexels-patrick-leung-6 {
+  top: 225px;
+  left: 305px;
+  position: absolute;
+  width: 285px;
+  height: 508px;
+}
+
+.gallery .pexels-patrick-leung-7 {
+  top: 225px;
+  left: 610px;
+  position: absolute;
+  width: 285px;
+  height: 508px;
+}
+
+.gallery .pexels-patrick-leung-8 {
+  top: 225px;
+  left: 915px;
+  position: absolute;
+  width: 285px;
+  height: 508px;
+}
+
+.gallery .headlineutama-6 {
+  width: 491px;
+  top: 57px;
+  left: 354px;
+  color: #243352;
+  font-size: 56.9px;
+  text-align: center;
+  letter-spacing: -2.84px;
+  line-height: 56.9px;
+  position: absolute;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+}
+
+.gallery .text-wrapper-3 {
+  position: absolute;
+  width: 647px;
+  top: 784px;
+  left: 277px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #243352;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 25.2px;
+}
+
+.gallery .div-wrapper {
+  position: absolute;
+  width: 1920px;
+  height: 1024px;
+  top: 5428px;
+  left: 0;
+}
+
+.gallery .group-7 {
+  height: 1024px;
+}
+
+.gallery .group-8 {
+  position: relative;
+  width: 1920px;
+  height: 1024px;
+}
+
+.gallery .overlap-group-wrapper {
+  position: absolute;
+  width: 1442px;
+  height: 512px;
+  top: 512px;
+  left: 240px;
+}
+
+.gallery .overlap-group {
+  position: relative;
+  width: 1440px;
+  height: 512px;
+  background-color: #ffffff;
+}
+
+.gallery .group-9 {
+  position: absolute;
+  width: 445px;
+  height: 206px;
+  top: 153px;
+  left: 120px;
+}
+
+.gallery .text-wrapper-4 {
+  position: absolute;
+  width: 170px;
+  top: 0;
+  left: 0;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #243352;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.gallery .text-wrapper-5 {
+  position: absolute;
+  width: 121px;
+  height: 26px;
+  top: 60px;
+  left: 0;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #243352;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.gallery .text-wrapper-6 {
+  position: absolute;
+  width: 121px;
+  top: 123px;
+  left: 0;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #243352;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.gallery .text-wrapper-7 {
+  position: absolute;
+  width: 170px;
+  top: 183px;
+  left: 0;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #243352;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.gallery .vector {
+  position: absolute;
+  width: 27px;
+  height: 33px;
+  top: 173px;
+  left: 407px;
+}
+
+.gallery .group-10 {
+  position: absolute;
+  width: 32px;
+  height: 33px;
+  top: 41px;
+  left: 305px;
+}
+
+.gallery .vector-2 {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  top: 40px;
+  left: 403px;
+}
+
+.gallery .social-icons {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  top: 172px;
+  left: 301px;
+}
+
+.gallery .social-icons-2 {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: 107px;
+  left: 305px;
+}
+
+.gallery .social-icons-3 {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  top: 106px;
+  left: 403px;
+}
+
+.gallery .text-wrapper-8 {
+  position: absolute;
+  width: 218px;
+  top: 336px;
+  left: 1102px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #243352;
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.gallery .overlap-wrapper {
+  position: absolute;
+  width: 1922px;
+  height: 512px;
+  top: 0;
+  left: 0;
+}
+
+.gallery .overlap {
+  position: relative;
+  width: 1920px;
+  height: 512px;
+  background-color: #243352;
+}
+
+.gallery .headlineutama-7 {
+  width: 947px;
+  top: 133px;
+  left: 487px;
+  color: #f5f5f5;
+  font-size: 75.8px;
+  text-align: center;
+  letter-spacing: -3.79px;
+  line-height: 75.8px;
+  position: absolute;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+}
+
+.gallery .section {
+  position: absolute;
+  width: 1923px;
+  height: 1080px;
+  top: 0;
+  left: -2px;
+}
+
+.gallery .overlap-2 {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+  left: 2px;
+  background-image: url(fotogallery/foto.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.gallery .navbar {
+  position: absolute;
+  width: 1029px;
+  height: 60px;
+  top: 49px;
+  left: 479px;
+}
+
+.gallery .text-wrapper-9 {
+  width: 69px;
+  left: 0;
+  position: absolute;
+  top: 13px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.gallery .text-wrapper-10 {
+  width: 54px;
+  left: 214px;
+  position: absolute;
+  top: 13px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.gallery .text-wrapper-11 {
+  position: absolute;
+  width: 86px;
+  top: 13px;
+  left: 689px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.gallery .text-wrapper-12 {
+  left: 920px;
+  position: absolute;
+  top: 13px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.gallery .group-11 {
+  position: absolute;
+  width: 169px;
+  height: 60px;
+  top: 0;
+  left: 397px;
+  background-image: url(fotogallery/Vector.svg);
+  background-size: 100% 100%;
+}
+
+.gallery .headline-utama-wrapper {
+  position: absolute;
+  width: 588px;
+  height: 534px;
+  top: 251px;
+  left: 268px;
+}
+
+.gallery .headline-utama {
+  position: relative;
+  width: 590px;
+  height: 534px;
+}
+
+.gallery .headlineutama-8 {
+  width: 588px;
+  top: 0;
+  left: 0;
+  color: #f5f5f5;
+  font-size: 101px;
+  letter-spacing: -6.06px;
+  line-height: 101.0px;
+  position: absolute;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+}
+
+.gallery .frame {
+  display: flex;
+  width: 267px;
+  height: 71px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 19px 55px;
+  position: absolute;
+  top: 463px;
+  left: 0;
+  background-color: #000000;
+  border-radius: 15px;
+}
+
+.gallery .text-wrapper-13 {
+  position: relative;
+  width: fit-content;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  color: #f5f5f5;
+  font-size: 30.2px;
+  letter-spacing: -1.81px;
+  line-height: 30.2px;
+  white-space: nowrap;
+}

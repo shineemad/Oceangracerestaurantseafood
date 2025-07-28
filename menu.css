@@ -1,0 +1,1069 @@
+.menu {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.menu .div {
+  background-color: #ffffff;
+  overflow: hidden;
+  width: 1920px;
+  height: 8612px;
+  position: relative;
+}
+
+.menu .group {
+  position: absolute;
+  width: 870px;
+  height: 698px;
+  top: 1271px;
+  left: 527px;
+}
+
+.menu .headlineutama {
+  width: 358px;
+  top: 0;
+  left: 249px;
+  color: #243352;
+  font-size: 75.8px;
+  text-align: center;
+  letter-spacing: -3.79px;
+  line-height: 75.8px;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+}
+
+.menu .group-wrapper {
+  position: absolute;
+  width: 866px;
+  height: 122px;
+  top: 576px;
+  left: 0;
+}
+
+.menu .group-2 {
+  position: relative;
+  width: 870px;
+  height: 122px;
+}
+
+.menu .text-wrapper {
+  width: 223px;
+  height: 45px;
+  top: 0;
+  left: 313px;
+  color: #243352;
+  font-size: 42.7px;
+  text-align: center;
+  letter-spacing: -2.13px;
+  line-height: 75.8px;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+}
+
+.menu .headlineutama-wrapper {
+  position: absolute;
+  width: 261px;
+  height: 45px;
+  top: 0;
+  left: 0;
+}
+
+.menu .headlineutama-2 {
+  width: 259px;
+  height: 45px;
+  top: 0;
+  left: 0;
+  color: #243352;
+  font-size: 42.7px;
+  text-align: center;
+  letter-spacing: -2.13px;
+  line-height: 75.8px;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+}
+
+.menu .headlineutama-3 {
+  width: 259px;
+  height: 45px;
+  top: 0;
+  left: 607px;
+  color: #243352;
+  font-size: 42.7px;
+  text-align: center;
+  letter-spacing: -2.13px;
+  line-height: 75.8px;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+}
+
+.menu .div-wrapper {
+  position: absolute;
+  width: 466px;
+  height: 45px;
+  top: 77px;
+  left: 191px;
+}
+
+.menu .group-3 {
+  position: relative;
+  width: 470px;
+  height: 45px;
+}
+
+.menu .headlineutama-4 {
+  width: 178px;
+  height: 45px;
+  top: 0;
+  left: 0;
+  color: #243352;
+  font-size: 42.7px;
+  text-align: center;
+  letter-spacing: -2.13px;
+  line-height: 75.8px;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+}
+
+.menu .headlineutama-5 {
+  width: 178px;
+  height: 45px;
+  top: 0;
+  left: 288px;
+  color: #243352;
+  font-size: 42.7px;
+  text-align: center;
+  letter-spacing: -2.13px;
+  line-height: 75.8px;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+}
+
+.menu .welcome-to-the {
+  position: absolute;
+  width: 618px;
+  top: 182px;
+  left: 119px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #243352;
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 36px;
+}
+
+.menu .group-4 {
+  position: absolute;
+  width: 1202px;
+  height: 786px;
+  top: 2307px;
+  left: 360px;
+}
+
+.menu .p {
+  width: 472px;
+  top: 56px;
+  left: 364px;
+  color: #243352;
+  font-size: 56.9px;
+  text-align: center;
+  letter-spacing: -2.84px;
+  line-height: 56.9px;
+  position: absolute;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+}
+
+.menu .img {
+  position: absolute;
+  width: 349px;
+  height: 25px;
+  top: 0;
+  left: 423px;
+}
+
+.menu .group-5 {
+  position: absolute;
+  width: 1200px;
+  height: 559px;
+  top: 226px;
+  left: 0;
+}
+
+.menu .overlap-group-wrapper {
+  position: absolute;
+  width: 391px;
+  height: 270px;
+  top: 0;
+  left: 0;
+}
+
+.menu .overlap-group {
+  position: relative;
+  width: 387px;
+  height: 270px;
+  background-image: url(fotomenu/Gambar\ WhatsApp\ 2025-07-25\ pukul\ 23.03.53_88b5b031.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.menu .pexels-patrick-leung {
+  position: absolute;
+  width: 387px;
+  height: 270px;
+  top: 0;
+  left: 0;
+}
+
+.menu .headlineutama-6 {
+  width: 158px;
+  top: 184px;
+  left: 40px;
+  color: #ffffff;
+  font-size: 24px;
+  letter-spacing: -1.20px;
+  line-height: 24.0px;
+  position: absolute;
+  font-family: "Playfair Display-Regular", Helvetica;
+  font-weight: 400;
+}
+
+.menu .headlineutama-7 {
+  width: 25px;
+  top: 206px;
+  left: 321px;
+  color: #ffffff;
+  font-size: 18px;
+  text-align: right;
+  letter-spacing: -0.90px;
+  line-height: 18.0px;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Playfair Display-Regular", Helvetica;
+  font-weight: 400;
+}
+
+.menu .group-6 {
+  position: absolute;
+  width: 40px;
+  height: 15px;
+  top: 165px;
+  left: 40px;
+}
+
+.menu .headlineutama-8 {
+  width: 21px;
+  height: 13px;
+  top: 0;
+  left: 17px;
+  color: #c4c4c4;
+  font-size: 13.9px;
+  letter-spacing: -0.69px;
+  line-height: 18.0px;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Playfair Display-Regular", Helvetica;
+  font-weight: 400;
+}
+
+.menu .star {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  top: 2px;
+  left: 0;
+}
+
+.menu .overlap-wrapper {
+  position: absolute;
+  width: 391px;
+  height: 270px;
+  top: 0;
+  left: 813px;
+}
+
+.menu .overlap {
+  position: relative;
+  width: 387px;
+  height: 270px;
+  background-image: url(fotomenu/Gambar\ WhatsApp\ 2025-07-25\ pukul\ 23.25.51_afc3ed08\ \(1\).jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.menu .group-7 {
+  position: absolute;
+  width: 391px;
+  height: 270px;
+  top: 290px;
+  left: 813px;
+}
+
+.menu .overlap-2 {
+  position: relative;
+  width: 387px;
+  height: 270px;
+  background-image: url(fotomenu/Gambar\ WhatsApp\ 2025-07-25\ pukul\ 23.51.06_c7ad8cb4\ \(1\).jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.menu .headlineutama-9 {
+  width: 126px;
+  top: 184px;
+  left: 40px;
+  color: #ffffff;
+  font-size: 24px;
+  letter-spacing: -1.20px;
+  line-height: 24.0px;
+  position: absolute;
+  font-family: "Playfair Display-Regular", Helvetica;
+  font-weight: 400;
+}
+
+.menu .headlineutama-10 {
+  width: 37px;
+  top: 206px;
+  left: 309px;
+  color: #ffffff;
+  font-size: 18px;
+  text-align: right;
+  letter-spacing: -0.90px;
+  line-height: 18.0px;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Playfair Display-Regular", Helvetica;
+  font-weight: 400;
+}
+
+.menu .group-8 {
+  position: absolute;
+  width: 391px;
+  height: 270px;
+  top: 290px;
+  left: 0;
+}
+
+.menu .overlap-3 {
+  position: relative;
+  width: 387px;
+  height: 270px;
+  background-image: url(fotomenu/Gambar\ WhatsApp\ 2025-07-25\ pukul\ 23.31.46_c93eaec7\ \(1\).jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.menu .headlineutama-11 {
+  width: 41px;
+  top: 206px;
+  left: 305px;
+  color: #ffffff;
+  font-size: 18px;
+  text-align: right;
+  letter-spacing: -0.90px;
+  line-height: 18.0px;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Playfair Display-Regular", Helvetica;
+  font-weight: 400;
+}
+
+.menu .group-9 {
+  position: absolute;
+  width: 390px;
+  height: 270px;
+  top: 0;
+  left: 407px;
+}
+
+.menu .overlap-4 {
+  position: relative;
+  width: 386px;
+  height: 270px;
+  background-image: url(fotomenu/Gambar\ WhatsApp\ 2025-07-25\ pukul\ 23.14.05_23eaa600\ \(1\).jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.menu .pexels-patrick-leung-2 {
+  position: absolute;
+  width: 386px;
+  height: 270px;
+  top: 0;
+  left: 0;
+}
+
+.menu .headlineutama-12 {
+  width: 40px;
+  top: 206px;
+  left: 305px;
+  color: #ffffff;
+  font-size: 18px;
+  text-align: right;
+  letter-spacing: -0.90px;
+  line-height: 18.0px;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Playfair Display-Regular", Helvetica;
+  font-weight: 400;
+}
+
+.menu .group-10 {
+  position: absolute;
+  width: 390px;
+  height: 270px;
+  top: 290px;
+  left: 407px;
+}
+
+.menu .overlap-5 {
+  position: relative;
+  width: 386px;
+  height: 270px;
+  background-image: url(fotomenu/Gambar\ WhatsApp\ 2025-07-25\ pukul\ 23.45.37_88254247\ \(1\).jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.menu .group-11 {
+  position: absolute;
+  width: 1202px;
+  height: 786px;
+  top: 3387px;
+  left: 360px;
+}
+
+.menu .overlap-group-2 {
+  position: relative;
+  width: 387px;
+  height: 270px;
+  background-image: url(fotomenu/Gambar\ WhatsApp\ 2025-07-25\ pukul\ 23.56.40_8ac0d126.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.menu .headlineutama-13 {
+  width: 38px;
+  top: 206px;
+  left: 308px;
+  color: #ffffff;
+  font-size: 18px;
+  text-align: right;
+  letter-spacing: -0.90px;
+  line-height: 18.0px;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Playfair Display-Regular", Helvetica;
+  font-weight: 400;
+}
+
+.menu .overlap-6 {
+  position: relative;
+  width: 387px;
+  height: 270px;
+  background-image: url(fotomenu/Gambar\ WhatsApp\ 2025-07-26\ pukul\ 00.03.32_d0149fae.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.menu .headlineutama-14 {
+  width: 40px;
+  top: 206px;
+  left: 306px;
+  color: #ffffff;
+  font-size: 18px;
+  text-align: right;
+  letter-spacing: -0.90px;
+  line-height: 18.0px;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Playfair Display-Regular", Helvetica;
+  font-weight: 400;
+}
+
+.menu .overlap-7 {
+  position: relative;
+  width: 387px;
+  height: 270px;
+  background-image: url(fotomenu/ChatGPT\ Image\ 26\ Jul\ 2025\,\ 00.09.20\ \(1\)\ \(1\)\ \(1\)\ \(2\).png);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.menu .headlineutama-15 {
+  width: 79px;
+  top: 184px;
+  left: 40px;
+  color: #ffffff;
+  font-size: 24px;
+  letter-spacing: -1.20px;
+  line-height: 24.0px;
+  position: absolute;
+  font-family: "Playfair Display-Regular", Helvetica;
+  font-weight: 400;
+}
+
+.menu .overlap-8 {
+  position: relative;
+  width: 387px;
+  height: 270px;
+  background-image: url(fotomenu/Gambar\ WhatsApp\ 2025-07-26\ pukul\ 00.05.43_182ed52f.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.menu .overlap-9 {
+  position: relative;
+  width: 386px;
+  height: 270px;
+  background-image: url(fotomenu/Gambar\ WhatsApp\ 2025-07-25\ pukul\ 23.58.37_128a6270.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.menu .overlap-10 {
+  position: relative;
+  width: 386px;
+  height: 270px;
+  background-image: url(fotomenu/Gambar\ WhatsApp\ 2025-07-25\ pukul\ 23.38.43_4b4bd668\ \(1\).jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.menu .group-12 {
+  position: absolute;
+  width: 1202px;
+  height: 786px;
+  top: 4467px;
+  left: 360px;
+}
+
+.menu .overlap-group-3 {
+  position: relative;
+  width: 387px;
+  height: 270px;
+  background-image: url(fotomenu/Gambar\ WhatsApp\ 2025-07-26\ pukul\ 00.17.00_c1393100.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.menu .overlap-11 {
+  position: relative;
+  width: 387px;
+  height: 270px;
+  background-image: url(fotomenu/Gambar\ WhatsApp\ 2025-07-26\ pukul\ 00.27.45_3add7f71.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.menu .overlap-12 {
+  position: relative;
+  width: 387px;
+  height: 270px;
+  background-image: url(fotomenu/Gambar\ WhatsApp\ 2025-07-26\ pukul\ 00.43.12_2fa5062a.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.menu .overlap-13 {
+  position: relative;
+  width: 387px;
+  height: 270px;
+  background-image: url(fotomenu/Gambar\ WhatsApp\ 2025-07-26\ pukul\ 00.32.54_f97d37e1.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.menu .overlap-14 {
+  position: relative;
+  width: 386px;
+  height: 270px;
+  background-image: url(fotomenu/Gambar\ WhatsApp\ 2025-07-26\ pukul\ 00.22.37_b6b3bc95.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.menu .overlap-15 {
+  position: relative;
+  width: 386px;
+  height: 270px;
+  background-image: url(fotomenu/Gambar\ WhatsApp\ 2025-07-26\ pukul\ 00.38.07_103525d7.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.menu .group-13 {
+  position: absolute;
+  width: 1202px;
+  height: 786px;
+  top: 6627px;
+  left: 360px;
+}
+
+.menu .overlap-group-4 {
+  position: relative;
+  width: 387px;
+  height: 270px;
+  background-image: url(fotomenu/Gambar\ WhatsApp\ 2025-07-26\ pukul\ 01.21.13_0dc1e6bb.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.menu .overlap-16 {
+  position: relative;
+  width: 387px;
+  height: 270px;
+  background-image: url(fotomenu/Gambar\ WhatsApp\ 2025-07-26\ pukul\ 01.26.21_a4a3144c.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.menu .headlineutama-16 {
+  width: 185px;
+  top: 184px;
+  left: 40px;
+  color: #ffffff;
+  font-size: 24px;
+  letter-spacing: -1.20px;
+  line-height: 24.0px;
+  position: absolute;
+  font-family: "Playfair Display-Regular", Helvetica;
+  font-weight: 400;
+}
+
+.menu .overlap-17 {
+  position: relative;
+  width: 387px;
+  height: 270px;
+  background-image: url(fotomenu/Gambar\ WhatsApp\ 2025-07-26\ pukul\ 01.34.17_6458d4c7.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.menu .overlap-18 {
+  position: relative;
+  width: 387px;
+  height: 270px;
+  background-image: url(fotomenu/Gambar\ WhatsApp\ 2025-07-26\ pukul\ 01.28.48_dc777d80.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.menu .overlap-19 {
+  position: relative;
+  width: 386px;
+  height: 270px;
+  background-image: url(fotomenu/Gambar\ WhatsApp\ 2025-07-26\ pukul\ 01.23.54_dec08b86.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.menu .overlap-20 {
+  position: relative;
+  width: 386px;
+  height: 270px;
+  background-image: url(fotomenu/Gambar\ WhatsApp\ 2025-07-26\ pukul\ 01.37.25_7b9963c6.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+/* latar belakang */
+.menu .overlap-21 {
+  position: absolute;
+  width: 1440px;
+  height: 1024px;
+  top: 7588px;
+  left: 0px;
+}
+
+.menu .group-14 {
+  position: absolute;
+  width: 1440px;
+  height: 1024px;
+  top: 0;
+  left: 0;
+}
+
+.menu .group-15 {
+  position: absolute;
+  width: 1442px;
+  height: 512px;
+  top: 512px;
+  left: 0;
+}
+
+.menu .overlap-group-5 {
+  position: relative;
+  width: 1440px;
+  height: 512px;
+  background-color: #ffffff;
+}
+
+.menu .group-16 {
+  position: absolute;
+  width: 445px;
+  height: 206px;
+  top: 153px;
+  left: 120px;
+}
+
+.menu .text-wrapper-2 {
+  position: absolute;
+  width: 170px;
+  top: 0;
+  left: 0;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #243352;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.menu .text-wrapper-3 {
+  position: absolute;
+  width: 121px;
+  height: 26px;
+  top: 60px;
+  left: 0;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #243352;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.menu .text-wrapper-4 {
+  position: absolute;
+  width: 121px;
+  top: 123px;
+  left: 0;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #243352;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.menu .text-wrapper-5 {
+  position: absolute;
+  width: 170px;
+  top: 183px;
+  left: 0;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #243352;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.menu .vector {
+  position: absolute;
+  width: 27px;
+  height: 33px;
+  top: 173px;
+  left: 407px;
+}
+
+.menu .group-17 {
+  position: absolute;
+  width: 32px;
+  height: 33px;
+  top: 41px;
+  left: 305px;
+}
+
+.menu .vector-2 {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  top: 40px;
+  left: 403px;
+}
+
+.menu .social-icons {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  top: 172px;
+  left: 301px;
+}
+
+.menu .social-icons-2 {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: 107px;
+  left: 305px;
+}
+
+.menu .social-icons-3 {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  top: 106px;
+  left: 403px;
+}
+
+.menu .text-wrapper-6 {
+  position: absolute;
+  width: 218px;
+  top: 336px;
+  left: 1102px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #243352;
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.menu .rectangle {
+  position: absolute;
+  width: 1920px;
+  height: 512px;
+  top: 7588px;
+  left: 240px;
+  background-color: #243352;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.menu .headlineutama-17 {
+  width: 947px;
+  top: 161px;
+  left: 500px;
+  color: #f5f5f5;
+  font-size: 75.8px;
+  text-align: center;
+  letter-spacing: -3.79px;
+  line-height: 75.8px;
+  position: absolute;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+}
+
+.menu .group-18 {
+  position: absolute;
+  width: 1202px;
+  height: 786px;
+  top: 5547px;
+  left: 360px;
+}
+
+.menu .overlap-group-6 {
+  position: relative;
+  width: 387px;
+  height: 270px;
+  background-image: url(fotomenu/Gambar\ WhatsApp\ 2025-07-26\ pukul\ 00.47.20_f3157c44.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.menu .overlap-22 {
+  position: relative;
+  width: 387px;
+  height: 270px;
+  background-image: url(fotomenu/Gambar\ WhatsApp\ 2025-07-26\ pukul\ 01.04.27_064c4661.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.menu .overlap-23 {
+  position: relative;
+  width: 387px;
+  height: 270px;
+  background-image: url(fotomenu/Gambar\ WhatsApp\ 2025-07-26\ pukul\ 01.16.30_a2fa79a2.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.menu .overlap-24 {
+  position: relative;
+  width: 387px;
+  height: 270px;
+  background-image: url(fotomenu/Gambar\ WhatsApp\ 2025-07-26\ pukul\ 01.09.44_8d5d7a63.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.menu .overlap-25 {
+  position: relative;
+  width: 386px;
+  height: 270px;
+  background-image: url(fotomenu/Gambar\ WhatsApp\ 2025-07-26\ pukul\ 00.57.57_5db261f9.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.menu .overlap-26 {
+  position: relative;
+  width: 386px;
+  height: 270px;
+  background-image: url(fotomenu/Gambar\ WhatsApp\ 2025-07-26\ pukul\ 01.13.55_39f70113.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.menu .section {
+  position: absolute;
+  width: 1922px;
+  height: 1083px;
+  top: 0;
+  left: -1px;
+}
+
+.menu .overlap-27 {
+  position: relative;
+  width: 1920px;
+  height: 1083px;
+  left: 1px;
+  background-image: url(fotomenu/foto\ awal.jpg);
+  background-size: 100% 100%;
+}
+
+.menu .navbar {
+  position: absolute;
+  width: 1029px;
+  height: 60px;
+  top: 48px;
+  left: 479px;
+}
+
+.menu .text-wrapper-7 {
+  width: 69px;
+  left: 0;
+  position: absolute;
+  top: 13px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.menu .text-wrapper-8 {
+  width: 54px;
+  left: 214px;
+  position: absolute;
+  top: 13px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.menu .text-wrapper-9 {
+  position: absolute;
+  width: 86px;
+  top: 13px;
+  left: 689px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.menu .text-wrapper-10 {
+  left: 920px;
+  position: absolute;
+  top: 13px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.menu .group-19 {
+  position: absolute;
+  width: 169px;
+  height: 60px;
+  top: 0;
+  left: 397px;
+  /* background-image: url(fotomenu/logo.png); */
+  background-size: 100% 100%;
+}
+
+.menu .headline-utama {
+  position: absolute;
+  width: 479px;
+  height: 534px;
+  top: 254px;
+  left: 268px;
+}
+
+.menu .headlineutama-18 {
+  width: 477px;
+  top: 0;
+  left: 0;
+  color: #f5f5f5;
+  font-size: 101px;
+  letter-spacing: -6.06px;
+  line-height: 101.0px;
+  position: absolute;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+}
+
+.menu .frame {
+  display: flex;
+  width: 267px;
+  height: 71px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 19px 55px;
+  position: absolute;
+  top: 463px;
+  left: 0;
+  background-color: #000000;
+  border-radius: 15px;
+}
+
+.menu .text-wrapper-11 {
+  position: relative;
+  width: fit-content;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  color: #f5f5f5;
+  font-size: 30.2px;
+  letter-spacing: -1.81px;
+  line-height: 30.2px;
+  white-space: nowrap;
+}

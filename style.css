@@ -1,0 +1,1060 @@
+/* ================================
+   GOOGLE FONTS IMPORT
+   ================================ */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+/* ================================
+   BASE STYLES
+   ================================ */
+
+* {
+  width: 100%;
+  max-width: 1920px;
+  margin: auto;
+}
+.beranda {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.beranda .div {
+  background-color: #ffffff;
+  overflow: hidden;
+  width: 1920px;
+  height: 7512px;
+  position: relative;
+}
+
+/* ================================
+   HEADER SECTION
+   ================================ */
+
+/* Header Container */
+.beranda .group {
+  position: absolute;
+  width: 1919px;
+  height: 1080px;
+  top: 0;
+  left: 1px;
+  background-image: url(image/foto.jpg);
+  background-size: 100% 100%;
+}
+
+/* Navigation Styles */
+.beranda .navbar {
+  position: absolute;
+  width: 1070px;
+  height: 60px;
+  top: 49px;
+  left: 428px;
+}
+
+.beranda .text-wrapper {
+  width: 71px;
+  left: 0;
+  position: absolute;
+  top: 13px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.beranda .text-wrapper-2 {
+  width: 57px;
+  left: 222px;
+  position: absolute;
+  top: 13px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.beranda .text-wrapper-3 {
+  position: absolute;
+  width: 90px;
+  top: 13px;
+  left: 716px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.beranda .text-wrapper-4 {
+  width: 105px;
+  left: 957px;
+  position: absolute;
+  top: 13px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.beranda .group-2 {
+  position: absolute;
+  width: 169px;
+  height: 60px;
+  top: 0;
+  left: 418px;
+  background-image: url(vector/Vector.svg);
+  cursor: pointer;
+  background-size: 100% 100%;
+}
+
+/* Hero Section */
+.beranda .headline-utama {
+  position: absolute;
+  width: 553px;
+  height: 534px;
+  top: 260px;
+  left: 266px;
+}
+
+.beranda .headlineutama {
+  width: 551px;
+  top: 0;
+  left: 0;
+  color: #f5f5f5;
+  font-size: 101px;
+  letter-spacing: -6.06px;
+  line-height: 101.0px;
+  position: absolute;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+}
+
+.beranda .frame {
+  display: flex;
+  width: 267px;
+  height: 71px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 19px 55px;
+  position: absolute;
+  top: 463px;
+  left: 0;
+  background-color: #000000;
+  border-radius: 15px;
+}
+
+.beranda .text-wrapper-5 {
+  position: relative;
+  width: fit-content;
+  font-family: "Playfair Display-Regular", Helvetica;
+  font-weight: 400;
+  color: #f5f5f5;
+  font-size: 30.2px;
+  letter-spacing: -1.81px;
+  line-height: 30.2px;
+  white-space: nowrap;
+}
+
+/* ================================
+   ABOUT SECTION
+   ================================ */
+
+.beranda .section-2 {
+  position: absolute;
+  width: 1011px;
+  height: 781px;
+  top: 1279px;
+  left: 455px;
+}
+
+.beranda .group-19 {
+  position: absolute;
+  width: 833px;
+  height: 566px;
+  top: 0;
+  left: 89px;
+}
+
+.beranda .group-20 {
+  position: absolute;
+  width: 837px;
+  height: 386px;
+  top: 0;
+  left: 0;
+}
+
+.beranda .headlineutama-9 {
+  width: 620px;
+  top: 0;
+  left: 106px;
+  color: #243352;
+  font-size: 75.8px;
+  text-align: center;
+  letter-spacing: -3.79px;
+  line-height: 75.8px;
+  position: absolute;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+}
+
+.beranda .text-wrapper-19 {
+  position: absolute;
+  width: 833px;
+  top: 242px;
+  left: 0;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #243352;
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 36px;
+}
+
+.beranda .line-2 {
+  position: absolute;
+  width: 111px;
+  height: 3px;
+  top: 564px;
+  left: 360px;
+}
+
+.beranda .group-21 {
+  position: absolute;
+  width: 1011px;
+  height: 25px;
+  top: 756px;
+  left: 0;
+}
+
+.beranda .group-22 {
+  position: absolute;
+  width: 95px;
+  height: 25px;
+  top: 0;
+  left: 461px;
+}
+
+.beranda .group-23 {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 0;
+  left: 35px;
+  background-image: url(vector/Polygon\ 1.svg);
+  background-size: 100% 100%;
+}
+
+.beranda .rectangle-3 {
+  position: absolute;
+  width: 418px;
+  height: 10px;
+  top: 8px;
+  left: 593px;
+  border-radius: 5px;
+  border: 2px solid;
+  border-color: #243352;
+}
+
+.beranda .rectangle-4 {
+  width: 418px;
+  height: 10px;
+  top: 8px;
+  left: 0;
+  border-radius: 5px;
+  position: absolute;
+  border: 2px solid;
+  border-color: #243352;
+}
+
+/* ================================
+   FEATURES SECTION
+   ================================ */
+
+.beranda .group-3 {
+  position: absolute;
+  width: 1201px;
+  height: 777px;
+  top: 2302px;
+  left: 360px;
+}
+
+.beranda .group-4 {
+  position: absolute;
+  width: 1132px;
+  height: 122px;
+  top: 0;
+  left: 41px;
+}
+
+.beranda .p {
+  width: 491px;
+  top: 0;
+  left: 0;
+  color: #243352;
+  font-size: 56.9px;
+  letter-spacing: -2.84px;
+  line-height: 56.9px;
+  position: absolute;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+}
+
+.beranda .text-wrapper-6 {
+  position: absolute;
+  width: 526px;
+  top: 15px;
+  left: 602px;
+  font-family: "Playfair Display-Regular", Helvetica;
+  font-weight: 400;
+  color: #243352;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 25.2px;
+}
+
+/* Feature Cards */
+.beranda .overlap-group-wrapper {
+  position: absolute;
+  width: 592px;
+  height: 544px;
+  top: 233px;
+  left: 0;
+}
+
+.beranda .overlap-group {
+  position: relative;
+  width: 590px;
+  height: 544px;
+  background-image: url(image/pantai.jpg);
+  background-size: 100% 100%;
+}
+
+.beranda .pexels-patrick-leung {
+  width: 590px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 544px;
+}
+
+.beranda .headlineutama-2 {
+  width: 210px;
+  top: 433px;
+  left: 50px;
+  color: #ffffff;
+  font-size: 32px;
+  letter-spacing: -1.60px;
+  line-height: 32px;
+  position: absolute;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+}
+
+.beranda .vector-wrapper {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  top: 438px;
+  left: 476px;
+  background-image: url(vector/lingkaran.svg);
+  background-size: 100% 100%;
+}
+
+.beranda .vector {
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  top: 22px;
+  left: 23px;
+}
+
+.beranda .overlap-wrapper {
+  position: absolute;
+  width: 592px;
+  height: 262px;
+  top: 233px;
+  left: 611px;
+}
+
+.beranda .overlap {
+  position: relative;
+  width: 590px;
+  height: 262px;
+  background-image: url(image/high.jpg);
+  background-size: 100% 100%;
+}
+
+.beranda .img {
+  position: absolute;
+  width: 590px;
+  height: 262px;
+  top: 0;
+  left: 0;
+}
+
+.beranda .headlineutama-3 {
+  width: 255px;
+  top: 159px;
+  left: 50px;
+  color: #f5f5f5;
+  font-size: 32px;
+  letter-spacing: -1.60px;
+  line-height: 32px;
+  position: absolute;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+}
+
+.beranda .img-wrapper {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  top: 156px;
+  left: 476px;
+  background-image: url(vector/lingkaran.svg);
+  background-size: 100% 100%;
+}
+
+.beranda .div-wrapper {
+  position: absolute;
+  width: 592px;
+  height: 262px;
+  top: 515px;
+  left: 610px;
+}
+
+.beranda .overlap-2 {
+  position: relative;
+  width: 590px;
+  height: 262px;
+  background-image: url(image/elegant.jpg);
+  background-size: 100% 100%;
+}
+
+.beranda .headlineutama-4 {
+  width: 264px;
+  top: 159px;
+  left: 50px;
+  color: #f5f5f5;
+  font-size: 32px;
+  letter-spacing: -1.60px;
+  line-height: 32px;
+  position: absolute;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+}
+
+.beranda .group-5 {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  top: 156px;
+  left: 476px;
+  background-image: url(vector/lingkaran.svg);
+  background-size: 100% 100%;
+}
+
+/* ================================
+   SPECIAL OFFERS SECTION
+   ================================ */
+
+.beranda .group-6 {
+  position: absolute;
+  width: 1204px;
+  height: 809px;
+  top: 3364px;
+  left: 360px;
+}
+
+.beranda .pexels-patrick-leung-2 {
+  width: 1200px;
+  top: 265px;
+  left: 0;
+  position: absolute;
+  height: 544px;
+}
+
+.beranda .overlap-3 {
+  position: absolute;
+  width: 1030px;
+  height: 176px;
+  top: 0;
+  left: 41px;
+}
+
+.beranda .headlineutama-5 {
+  width: 417px;
+  top: 0;
+  left: 613px;
+  color: #243352;
+  font-size: 75.8px;
+  text-align: right;
+  letter-spacing: -3.79px;
+  line-height: 75.8px;
+  position: absolute;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+}
+
+.beranda .enjoy-our-finest {
+  position: absolute;
+  width: 623px;
+  top: 71px;
+  left: 0;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #243352;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 25.2px;
+}
+
+/* ================================
+   CHEF'S SECTION
+   ================================ */
+
+.beranda .group-wrapper {
+  position: absolute;
+  width: 1108px;
+  height: 758px;
+  top: 4504px;
+  left: 423px;
+}
+
+.beranda .group-7 {
+  position: relative;
+  height: 758px;
+}
+
+.beranda .pexels-patrick-leung-3 {
+  width: 624px;
+  top: 0;
+  left: 484px;
+  position: absolute;
+  height: 544px;
+}
+
+.beranda .group-8 {
+  position: absolute;
+  width: 412px;
+  height: 298px;
+  top: 123px;
+  left: 0;
+}
+
+.beranda .every-ingredient-i {
+  position: absolute;
+  width: 406px;
+  top: 104px;
+  left: 0;
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 400;
+  color: #243352;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 25.2px;
+}
+
+.beranda .span {
+  font-weight: 700;
+}
+
+.beranda .text-wrapper-7 {
+  font-family: "Inter-MediumItalic", Helvetica;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.beranda .chef-ardi-mahendra {
+  position: absolute;
+  width: 406px;
+  top: 224px;
+  left: 0;
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 400;
+  color: #243352;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 25.2px;
+}
+
+.beranda .text-wrapper-8 {
+  font-family: "Inter-Regular", Helvetica;
+}
+
+.beranda .headlineutama-6 {
+  width: 293px;
+  top: 0;
+  left: 0;
+  color: #243352;
+  font-size: 56.9px;
+  letter-spacing: -2.84px;
+  line-height: 56.9px;
+  position: absolute;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+}
+
+.beranda .group-9 {
+  position: absolute;
+  width: 1002px;
+  height: 25px;
+  top: 733px;
+  left: 36px;
+}
+
+.beranda .group-10 {
+  position: relative;
+  height: 25px;
+}
+
+.beranda .group-11 {
+  position: absolute;
+  width: 95px;
+  height: 25px;
+  top: 0;
+  left: 454px;
+}
+
+.beranda .polygon {
+  left: 0;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 0;
+}
+
+.beranda .group-12 {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 0;
+  left: 35px;
+  background-image: url(vector/Polygon\ 1.svg);
+  background-size: 100% 100%;
+}
+
+.beranda .polygon-2 {
+  left: 70px;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 0;
+}
+
+.beranda .rectangle {
+  width: 418px;
+  height: 10px;
+  top: 8px;
+  left: 584px;
+  border-radius: 5px;
+  position: absolute;
+  border: 2px solid;
+  border-color: #243352;
+}
+
+.beranda .rectangle-2 {
+  width: 414px;
+  height: 12px;
+  top: 7px;
+  left: 0;
+  border-radius: 6px;
+  position: absolute;
+  border: 2px solid;
+  border-color: #243352;
+}
+
+/* ================================
+   SERVICES SECTION
+   ================================ */
+
+.beranda .section {
+  position: absolute;
+  width: 755px;
+  height: 740px;
+  top: 5504px;
+  left: 583px;
+}
+
+.beranda .group-13 {
+  position: absolute;
+  width: 757px;
+  height: 570px;
+  top: 170px;
+  left: 0;
+}
+
+.beranda .overlap-4 {
+  position: relative;
+  width: 755px;
+  height: 570px;
+}
+
+.beranda .headlineutama-7 {
+  width: 755px;
+  top: 0;
+  left: 0;
+  color: #243352;
+  font-size: 75.8px;
+  text-align: center;
+  letter-spacing: -3.79px;
+  line-height: 75.8px;
+  position: absolute;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+}
+
+.beranda .group-14 {
+  position: absolute;
+  width: 585px;
+  height: 365px;
+  top: 205px;
+  left: 120px;
+}
+
+.beranda .overlap-group-2 {
+  position: absolute;
+  width: 496px;
+  height: 365px;
+  top: 0;
+  left: 79px;
+}
+
+.beranda .text-wrapper-9 {
+  position: absolute;
+  width: 480px;
+  height: 97px;
+  top: 0;
+  left: 0;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: #243352;
+  font-size: 34.1px;
+  letter-spacing: 0;
+  line-height: 96.2px;
+}
+
+.beranda .text-wrapper-10 {
+  position: absolute;
+  width: 496px;
+  height: 97px;
+  top: 67px;
+  left: 0;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: #243352;
+  font-size: 34.1px;
+  letter-spacing: 0;
+  line-height: 96.2px;
+}
+
+.beranda .text-wrapper-11 {
+  position: absolute;
+  width: 350px;
+  height: 97px;
+  top: 134px;
+  left: 0;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: #243352;
+  font-size: 34.1px;
+  letter-spacing: 0;
+  line-height: 96.2px;
+}
+
+.beranda .text-wrapper-12 {
+  position: absolute;
+  width: 336px;
+  height: 97px;
+  top: 201px;
+  left: 0;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: #243352;
+  font-size: 34.1px;
+  letter-spacing: 0;
+  line-height: 96.2px;
+}
+
+.beranda .text-wrapper-13 {
+  position: absolute;
+  width: 410px;
+  height: 97px;
+  top: 268px;
+  left: 0;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: #243352;
+  font-size: 34.1px;
+  letter-spacing: 0;
+  line-height: 96.2px;
+}
+
+.beranda .icon {
+  top: 19px;
+  position: absolute;
+  width: 51px;
+  height: 52px;
+  left: -3px;
+}
+
+.beranda .icon-2 {
+  top: 88px;
+  position: absolute;
+  width: 51px;
+  height: 52px;
+  left: -3px;
+}
+
+.beranda .icon-3 {
+  top: 156px;
+  position: absolute;
+  width: 51px;
+  height: 52px;
+  left: -3px;
+}
+
+.beranda .icon-4 {
+  top: 225px;
+  position: absolute;
+  width: 51px;
+  height: 52px;
+  left: -3px;
+}
+
+.beranda .icon-5 {
+  top: 294px;
+  position: absolute;
+  width: 51px;
+  height: 52px;
+  left: -3px;
+}
+
+.beranda .line {
+  position: absolute;
+  width: 111px;
+  height: 3px;
+  top: -2px;
+  left: 322px;
+}
+
+/* ================================
+   CALL TO ACTION SECTION
+   ================================ */
+
+.beranda .group-15 {
+  position: absolute;
+  width: 1922px;
+  height: 512px;
+  top: 6508px;
+  left: 0;
+}
+
+.beranda .headlineutama-wrapper {
+  position: relative;
+  width: 1920px;
+  height: 512px;
+  background-color: #243352;
+}
+
+.beranda .headlineutama-8 {
+  width: 947px;
+  top: 168px;
+  left: 487px;
+  color: #f5f5f5;
+  font-size: 75.8px;
+  text-align: center;
+  letter-spacing: -3.79px;
+  line-height: 75.8px;
+  position: absolute;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+}
+
+/* ================================
+   FOOTER SECTION
+   ================================ */
+
+.beranda .group-16 {
+  position: absolute;
+  width: 1202px;
+  height: 206px;
+  top: 7173px;
+  left: 360px;
+}
+
+.beranda .group-17 {
+  position: absolute;
+  width: 445px;
+  height: 206px;
+  top: 0;
+  left: 0;
+}
+
+.beranda .text-wrapper-14 {
+  position: absolute;
+  width: 170px;
+  top: 0;
+  left: 0;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #243352;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.beranda .text-wrapper-15 {
+  position: absolute;
+  width: 121px;
+  height: 26px;
+  top: 60px;
+  left: 0;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #243352;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.beranda .text-wrapper-16 {
+  position: absolute;
+  width: 121px;
+  top: 123px;
+  left: 0;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #243352;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.beranda .text-wrapper-17 {
+  position: absolute;
+  width: 170px;
+  top: 183px;
+  left: 0;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #243352;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.beranda .vector-2 {
+  position: absolute;
+  width: 27px;
+  height: 33px;
+  top: 173px;
+  left: 407px;
+}
+
+.beranda .group-18 {
+  position: absolute;
+  width: 32px;
+  height: 33px;
+  top: 41px;
+  left: 305px;
+}
+
+.beranda .vector-3 {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  top: 40px;
+  left: 403px;
+}
+
+.beranda .social-icons {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  top: 172px;
+  left: 301px;
+}
+
+.beranda .social-icons-2 {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: 107px;
+  left: 305px;
+}
+
+.beranda .social-icons-3 {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  top: 106px;
+  left: 403px;
+}
+
+.beranda .text-wrapper-18 {
+  position: absolute;
+  width: 218px;
+  top: 183px;
+  left: 982px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #243352;
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+/* Remove blue colors from navbar */
+.beranda .navbar,
+.beranda .nav-item,
+.beranda .text-wrapper,
+.beranda .text-wrapper-2,
+.beranda .text-wrapper-3,
+.beranda .text-wrapper-4,
+.beranda .navbar-brand,
+.beranda .navbar-nav,
+.beranda .nav-link {
+  color: #ffffff !important;
+  background-color: transparent !important;
+}
+
+.beranda .navbar a,
+.beranda .navbar a:hover,
+.beranda .navbar a:focus,
+.beranda .navbar a:active {
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+/* Remove any blue background or border from navbar */
+.beranda .navbar {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Override any bootstrap or default link colors */
+.beranda .navbar .navbar-nav .nav-link {
+  color: #ffffff !important;
+}

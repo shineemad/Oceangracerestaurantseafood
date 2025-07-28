@@ -1,0 +1,1857 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reservasi - Ocean Grace</title>
+  <style>
+    html {
+      padding: 0;
+      margin: 0;
+      overflow-x: hidden;
+      max-width: 100%;
+      scrollbar-width: none;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url(pexels-sebastian-189349.jpg);
+      background-position: center;
+      margin: 0;
+      padding: 40px;
+    }
+
+    .reservasi-container {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 1200px;
+      margin: auto;
+      backdrop-filter: blur(5.1px);
+    }
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: #f5f5f5;
+      font-size: 57px;
+      margin-bottom: 50px;
+      margin-top: 20px;
+    }
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .form-group {
+      flex: 1 1 300px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #f1f1f1;
+    }
+
+    input, select, textarea {
+      padding: 12px 16px;
+      border: 1px solid #d2d2d2;
+      border-radius: 10px;
+      font-size: 16px;
+      font-family: inherit;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .checkbox-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    button {
+      background-color: #243352;
+      color: #f5f5f5;
+      border: none;
+      padding: 14px 28px;
+      font-size: 16px;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #f5f5f5;
+      color: #243352;
+    }
+
+    button:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+
+    .full-width {
+      flex: 1 1 100%;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+
+    h2:hover{
+      color: #243352;
+    }
+
+    .judul:hover {
+      opacity: 60%;
+      transition: opacity 0.3s ease;
+    }
+
+    /* Message styles */
+    .success-message {
+      background-color: #4CAF50;
+      color: white;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      display: none;
+    }
+
+    .error-message {
+      background-color: #f44336;
+      color: white;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      display: none;
+    }
+
+    .loading {
+      opacity: 0.7;
+      pointer-events: none;
+    }
+
+    /* Enhanced Form Validation Styles */
+    .form-group {
+      position: relative;
+    }
+
+    .form-group.error input,
+    .form-group.error select,
+    .form-group.error textarea {
+      border-color: #ff4444;
+      background-color: rgba(255, 68, 68, 0.1);
+      animation: shake 0.5s ease-in-out;
+    }
+
+    .form-group.success input,
+    .form-group.success select,
+    .form-group.success textarea {
+      border-color: #4CAF50;
+      background-color: rgba(76, 175, 80, 0.1);
+    }
+
+    .error-text {
+      color: #ff4444;
+      font-size: 12px;
+      margin-top: 5px;
+      display: none;
+      animation: fadeInUp 0.3s ease;
+    }
+
+    .success-text {
+      color: #4CAF50;
+      font-size: 12px;
+      margin-top: 5px;
+      display: none;
+      animation: fadeInUp 0.3s ease;
+    }
+
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-5px); }
+      75% { transform: translateX(5px); }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Progress Bar */
+    .progress-container {
+      width: 100%;
+      height: 6px;
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 3px;
+      margin-bottom: 30px;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      height: 100%;
+      background: linear-gradient(90deg, #243352, #4CAF50);
+      width: 0%;
+      border-radius: 3px;
+      transition: width 0.3s ease;
+    }
+
+    /* Real-time validation indicators */
+    .validation-icon {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 16px;
+      display: none;
+    }
+
+    .validation-icon.success {
+      color: #4CAF50;
+    }
+
+    .validation-icon.error {
+      color: #ff4444;
+    }
+
+    /* Enhanced Input Styles */
+    input:focus,
+    select:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #243352;
+      box-shadow: 0 0 0 3px rgba(36, 51, 82, 0.1);
+      transform: translateY(-2px);
+      transition: all 0.3s ease;
+    }
+
+    /* Character Counter */
+    .char-counter {
+      font-size: 11px;
+      color: #888;
+      text-align: right;
+      margin-top: 3px;
+    }
+
+    /* Enhanced Button States */
+    button {
+      position: relative;
+      overflow: hidden;
+    }
+
+    button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s;
+    }
+
+    button:hover::before {
+      left: 100%;
+    }
+
+    .btn-loading {
+      position: relative;
+    }
+
+    .btn-loading::after {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      margin: auto;
+      border: 2px solid transparent;
+      border-top-color: #ffffff;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    @keyframes spin {
+      0% { transform: translate(-50%, -50%) rotate(0deg); }
+      100% { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+
+    /* Tooltip Styles */
+    .tooltip {
+      position: relative;
+      cursor: help;
+    }
+
+    .tooltip::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      white-space: nowrap;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      z-index: 1000;
+    }
+
+    .tooltip:hover::after {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(-5px);
+    }
+
+    /* Form Step Indicator */
+    .form-steps {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+      gap: 10px;
+    }
+
+    .step {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .step.active {
+      background: #4CAF50;
+      transform: scale(1.2);
+    }
+
+    .step.completed {
+      background: #243352;
+    }
+
+    /* Custom Alert Styles */
+    .custom-alert {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 10000;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .custom-alert.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .alert-content {
+      background: linear-gradient(135deg, #ffffff, #f8f9fa);
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 500px;
+      width: 90%;
+      text-align: center;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3),
+                  0 0 50px rgba(26, 71, 42, 0.1);
+      transform: scale(0.7) translateY(50px);
+      transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .custom-alert.show .alert-content {
+      transform: scale(1) translateY(0);
+    }
+
+    .alert-content::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #243352, #4CAF50, #d4af37);
+      border-radius: 20px 20px 0 0;
+    }
+
+    .alert-icon {
+      font-size: 60px;
+      margin-bottom: 20px;
+      animation: bounce 1s ease infinite alternate;
+    }
+
+    .alert-icon.success {
+      color: #4CAF50;
+    }
+
+    .alert-icon.error {
+      color: #f44336;
+    }
+
+    .alert-icon.info {
+      color: #2196F3;
+    }
+
+    @keyframes bounce {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-10px); }
+    }
+
+    .alert-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      color: #243352;
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+
+    .alert-message {
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    .alert-details {
+      background: rgba(26, 71, 42, 0.05);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 30px;
+      border-left: 4px solid #4CAF50;
+    }
+
+    .alert-detail-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+
+    .alert-detail-label {
+      font-weight: 600;
+      color: #243352;
+    }
+
+    .alert-detail-value {
+      color: #666;
+    }
+
+    .alert-buttons {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .alert-btn {
+      padding: 12px 24px;
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .alert-btn.primary {
+      background: linear-gradient(135deg, #243352, #4CAF50);
+      color: white;
+    }
+
+    .alert-btn.primary:hover {
+      background: linear-gradient(135deg, #4CAF50, #243352);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .alert-btn.secondary {
+      background: #f8f9fa;
+      color: #243352;
+      border: 2px solid #243352;
+    }
+
+    .alert-btn.secondary:hover {
+      background: #243352;
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    /* Confetti Animation */
+    .confetti {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: #4CAF50;
+      animation: confetti-fall 3s linear infinite;
+    }
+
+    .confetti:nth-child(1) { left: 10%; animation-delay: 0s; background: #4CAF50; }
+    .confetti:nth-child(2) { left: 20%; animation-delay: 0.2s; background: #243352; }
+    .confetti:nth-child(3) { left: 30%; animation-delay: 0.4s; background: #d4af37; }
+    .confetti:nth-child(4) { left: 40%; animation-delay: 0.6s; background: #4CAF50; }
+    .confetti:nth-child(5) { left: 50%; animation-delay: 0.8s; background: #243352; }
+    .confetti:nth-child(6) { left: 60%; animation-delay: 1s; background: #d4af37; }
+    .confetti:nth-child(7) { left: 70%; animation-delay: 1.2s; background: #4CAF50; }
+    .confetti:nth-child(8) { left: 80%; animation-delay: 1.4s; background: #243352; }
+    .confetti:nth-child(9) { left: 90%; animation-delay: 1.6s; background: #d4af37; }
+
+    @keyframes confetti-fall {
+      0% {
+        transform: translateY(-100vh) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="reservasi-container">
+  <h2><a href="index.html" class="judul">Ocean Grace Reservations</a></h2>
+  
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+  
+  <!-- Form Steps Indicator -->
+  <div class="form-steps">
+    <div class="step active" id="step1"></div>
+    <div class="step" id="step2"></div>
+    <div class="step" id="step3"></div>
+    <div class="step" id="step4"></div>
+  </div>
+  
+  <div id="successMessage" class="success-message"></div>
+  <div id="errorMessage" class="error-message"></div>
+  
+  <form id="reservationForm">
+    <div class="form-group">
+      <label for="nama">Full Name <span class="tooltip" data-tooltip="Enter your full name as it appears on ID">ℹ️</span></label>
+      <input type="text" id="nama" name="nama" placeholder="example: Amanda Lestari" required>
+      <span class="validation-icon" id="namaIcon"></span>
+      <div class="error-text" id="namaError"></div>
+      <div class="success-text" id="namaSuccess"></div>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email <span class="tooltip" data-tooltip="We'll send confirmation to this email">ℹ️</span></label>
+      <input type="email" id="email" name="email" placeholder="example: amanda@mail.com" required>
+      <span class="validation-icon" id="emailIcon"></span>
+      <div class="error-text" id="emailError"></div>
+      <div class="success-text" id="emailSuccess"></div>
+    </div>
+
+    <div class="form-group">
+      <label for="telepon">Phone Number <span class="tooltip" data-tooltip="Indonesian phone number format">ℹ️</span></label>
+      <input type="tel" id="telepon" name="telepon" placeholder="example: 0812xxxxxxx" required>
+      <span class="validation-icon" id="teleponIcon"></span>
+      <div class="error-text" id="teleponError"></div>
+      <div class="success-text" id="teleponSuccess"></div>
+    </div>
+
+    <div class="form-group">
+      <label for="tanggal">Reservation Date <span class="tooltip" data-tooltip="Select your preferred date">ℹ️</span></label>
+      <input type="date" id="tanggal" name="tanggal" required>
+      <span class="validation-icon" id="tanggalIcon"></span>
+      <div class="error-text" id="tanggalError"></div>
+      <div class="success-text" id="tanggalSuccess"></div>
+    </div>
+
+    <div class="form-group">
+      <label for="waktu">Arrival Time</label>
+      <select id="waktu" name="waktu" required>
+        <option value="">Select Time</option>
+        <option value="17.00">17.00</option>
+        <option value="18.00">18.00</option>
+        <option value="19.00">19.00</option>
+        <option value="20.00">20.00</option>
+        <option value="21.00">21.00</option>
+      </select>
+      <span class="validation-icon" id="waktuIcon"></span>
+      <div class="error-text" id="waktuError"></div>
+      <div class="success-text" id="waktuSuccess"></div>
+    </div>
+
+    <div class="form-group">
+      <label for="jumlah">Number of People</label>
+      <select id="jumlah" name="jumlah" required>
+        <option value="">Select People</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+      <span class="validation-icon" id="jumlahIcon"></span>
+      <div class="error-text" id="jumlahError"></div>
+      <div class="success-text" id="jumlahSuccess"></div>
+    </div>
+
+    <div class="form-group">
+      <label for="area">Seating Area</label>
+      <select id="area" name="area" required>
+        <option value="">Select Area</option>
+        <option value="Indoor Elegan">Indoor Elegan</option>
+        <option value="Outdoor Sunset">Outdoor Sunset</option>
+        <option value="Gazebo Private">Gazebo Private</option>
+      </select>
+      <span class="validation-icon" id="areaIcon"></span>
+      <div class="error-text" id="areaError"></div>
+      <div class="success-text" id="areaSuccess"></div>
+    </div>
+    
+    <div class="form-group full-width">
+      <label>Additional Experience</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="chef_menu" value="1"> Chef's exclusive curated seasonal menu</label>
+        <label><input type="checkbox" name="live_performance" value="1"> Live acoustic performance</label>
+        <label><input type="checkbox" name="sunset_terrace" value="1"> Romantic terrace with sunset view</label>
+        <label><input type="checkbox" name="private_gazebo" value="1"> Private dining gazebo</label>
+      </div>
+    </div>
+    
+    <label style="color: rgb(255, 24, 24);">*Payment Made On Site*</label>
+    
+    <div class="form-group full-width">
+      <label for="catatan">Additional Notes <span class="tooltip" data-tooltip="Any special requests or dietary restrictions">ℹ️</span></label>
+      <textarea id="catatan" name="catatan" placeholder="example: alergi seafood, permintaan birthday cake, dll." maxlength="500"></textarea>
+      <div class="char-counter" id="catatanCounter">0/500 characters</div>
+      <div class="error-text" id="catatanError"></div>
+    </div>
+
+    <div class="form-group full-width">
+      <label><input type="checkbox" id="terms" required> I agree to the terms & conditions of the Ocean Grace reservation.</label>
+      <div class="error-text" id="termsError"></div>
+    </div>
+
+    <div class="form-group full-width">
+      <button type="submit" id="submitBtn" disabled>Complete Reservation</button>
+    </div>
+  </form>
+</div>
+
+
+<script>
+/**
+ * Ocean Grace Reservation Form - Advanced Validation System
+ * Features: Real-time validation, DOM manipulation, Event handling
+ */
+
+class OceanGraceReservationForm {
+  constructor() {
+    this.form = document.getElementById('reservationForm');
+    this.submitBtn = document.getElementById('submitBtn');
+    this.progressBar = document.getElementById('progressBar');
+    
+    // Validation rules
+    this.validationRules = {
+      nama: { 
+        required: true, 
+        minLength: 3, 
+        maxLength: 50,
+        pattern: /^[a-zA-Z\s]+$/,
+        message: 'Name must contain only letters and spaces (3-50 characters)'
+      },
+      email: { 
+        required: true, 
+        pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+        message: 'Please enter a valid email address'
+      },
+      telepon: { 
+        required: true, 
+        pattern: /^(\+62|62|0)[0-9]{8,13}$/,
+        message: 'Please enter a valid Indonesian phone number (08xx-xxxx-xxxx or +62xxx)'
+      },
+      tanggal: { 
+        required: true, 
+        custom: this.validateDate.bind(this),
+        message: 'Please select a valid future date'
+      },
+      waktu: { 
+        required: true,
+        message: 'Please select arrival time'
+      },
+      jumlah: { 
+        required: true,
+        message: 'Please select number of people'
+      },
+      area: { 
+        required: true,
+        message: 'Please select seating area'
+      }
+    };
+    
+    this.formState = {
+      completedFields: 0,
+      totalFields: Object.keys(this.validationRules).length,
+      isValid: false
+    };
+    
+    this.init();
+  }
+  
+  init() {
+    this.setupEventListeners();
+    this.setupDateConstraints();
+    this.setupCharacterCounter();
+    this.setupTooltips();
+    this.initializeFormState();
+    console.log('🍽️ Ocean Grace Reservation Form initialized with advanced validation');
+  }
+  
+  setupEventListeners() {
+    // Real-time validation for all form fields
+    const inputs = this.form.querySelectorAll('input, select, textarea');
+    
+    inputs.forEach(input => {
+      // Input events for real-time validation
+      input.addEventListener('input', (e) => this.handleInputChange(e));
+      input.addEventListener('blur', (e) => this.handleFieldBlur(e));
+      input.addEventListener('focus', (e) => this.handleFieldFocus(e));
+      
+      // Special handling for specific field types
+      if (input.type === 'tel') {
+        input.addEventListener('input', (e) => this.formatPhoneNumber(e));
+      }
+    });
+    
+    // Form submission
+    this.form.addEventListener('submit', (e) => this.handleFormSubmit(e));
+    
+    // Terms checkbox
+    document.getElementById('terms').addEventListener('change', (e) => {
+      this.validateTerms(e.target);
+      this.updateSubmitButton();
+    });
+    
+    // Checkbox group validation
+    const checkboxes = this.form.querySelectorAll('input[type="checkbox"]:not(#terms)');
+    checkboxes.forEach(checkbox => {
+      checkbox.addEventListener('change', () => this.updateProgress());
+    });
+    
+    // Advanced interactions
+    this.setupAdvancedInteractions();
+  }
+  
+  setupAdvancedInteractions() {
+    // Dynamic time slot availability
+    document.getElementById('tanggal').addEventListener('change', (e) => {
+      this.updateAvailableTimeSlots(e.target.value);
+    });
+    
+    // Dynamic area recommendations
+    document.getElementById('jumlah').addEventListener('change', (e) => {
+      this.recommendSeatingArea(e.target.value);
+    });
+    
+    // Smart form auto-fill suggestions
+    document.getElementById('nama').addEventListener('input', (e) => {
+      this.suggestEmailFromName(e.target.value);
+    });
+  }
+  
+  handleInputChange(event) {
+    const field = event.target;
+    const fieldName = field.id;
+    
+    // Clear previous validation state
+    this.clearFieldValidation(field);
+    
+    // Perform real-time validation
+    if (field.value.trim() !== '') {
+      this.validateField(field, fieldName);
+    }
+    
+    // Update form progress
+    this.updateProgress();
+    this.updateSubmitButton();
+  }
+  
+  handleFieldBlur(event) {
+    const field = event.target;
+    const fieldName = field.id;
+    
+    // Validate field on blur (when user leaves the field)
+    this.validateField(field, fieldName);
+    this.updateProgress();
+  }
+  
+  handleFieldFocus(event) {
+    const field = event.target;
+    
+    // Clear error state when user focuses on field
+    this.clearFieldValidation(field);
+    
+    // Add focus styling
+    field.parentElement.classList.add('focused');
+    
+    // Remove focus styling when field loses focus
+    field.addEventListener('blur', () => {
+      field.parentElement.classList.remove('focused');
+    }, { once: true });
+  }
+  
+  validateField(field, fieldName) {
+    const rule = this.validationRules[fieldName];
+    if (!rule) return true;
+    
+    const value = field.value.trim();
+    let isValid = true;
+    let errorMessage = '';
+    
+    // Required validation
+    if (rule.required && !value) {
+      isValid = false;
+      errorMessage = `${this.getFieldLabel(fieldName)} is required`;
+    }
+    
+    // Special validation for phone number
+    else if (fieldName === 'telepon' && value) {
+      const phoneValidation = this.validatePhoneNumber(value);
+      if (!phoneValidation.isValid) {
+        isValid = false;
+        errorMessage = phoneValidation.message;
+      }
+    }
+    
+    // Pattern validation for other fields
+    else if (value && rule.pattern && fieldName !== 'telepon' && !rule.pattern.test(value)) {
+      isValid = false;
+      errorMessage = rule.message;
+    }
+    
+    // Length validation
+    else if (value && rule.minLength && value.length < rule.minLength) {
+      isValid = false;
+      errorMessage = `${this.getFieldLabel(fieldName)} must be at least ${rule.minLength} characters`;
+    }
+    
+    else if (value && rule.maxLength && value.length > rule.maxLength) {
+      isValid = false;
+      errorMessage = `${this.getFieldLabel(fieldName)} must not exceed ${rule.maxLength} characters`;
+    }
+    
+    // Custom validation
+    else if (value && rule.custom) {
+      const customResult = rule.custom(value);
+      if (!customResult.isValid) {
+        isValid = false;
+        errorMessage = customResult.message;
+      }
+    }
+    
+    // Apply validation result
+    this.applyValidationResult(field, isValid, errorMessage);
+    
+    return isValid;
+  }
+  
+  validatePhoneNumber(phoneNumber) {
+    // Remove all non-digit characters except + for validation
+    const original = phoneNumber.trim();
+    const cleaned = phoneNumber.replace(/[^\d+]/g, '');
+    const digitsOnly = phoneNumber.replace(/\D/g, '');
+    
+    // Check if empty
+    if (!original) {
+      return { isValid: false, message: 'Phone number is required' };
+    }
+    
+    // Indonesian phone number validation patterns
+    const validPatterns = [
+      // Mobile numbers starting with 08 (10-13 digits total)
+      {
+        pattern: /^08[1-9]\d{7,10}$/,
+        description: '08xxxxxxxxx (Indonesian mobile)',
+        test: (num) => /^08[1-9]\d{7,10}$/.test(num)
+      },
+      
+      // International mobile +628 (12-15 digits total)
+      {
+        pattern: /^\+628[1-9]\d{7,10}$/,
+        description: '+628xxxxxxxxx (International mobile)',
+        test: (num) => /^\+628[1-9]\d{7,10}$/.test(num)
+      },
+      
+      // International mobile 628 (11-14 digits total)
+      {
+        pattern: /^628[1-9]\d{7,10}$/,
+        description: '628xxxxxxxxx (International mobile)',
+        test: (num) => /^628[1-9]\d{7,10}$/.test(num)
+      },
+      
+      // Landline numbers with area code (10-12 digits total)
+      {
+        pattern: /^0[2-9]\d{8,10}$/,
+        description: '02xxxxxxxx (Indonesian landline)',
+        test: (num) => /^0[2-9]\d{8,10}$/.test(num)
+      },
+      
+      // International landline +62 (12-14 digits total)
+      {
+        pattern: /^\+62[2-9]\d{8,10}$/,
+        description: '+622xxxxxxxx (International landline)',
+        test: (num) => /^\+62[2-9]\d{8,10}$/.test(num)
+      },
+      
+      // International landline 62 (11-13 digits total)
+      {
+        pattern: /^62[2-9]\d{8,10}$/,
+        description: '622xxxxxxxx (International landline)',
+        test: (num) => /^62[2-9]\d{8,10}$/.test(num)
+      }
+    ];
+    
+    // Test against all patterns
+    const isValid = validPatterns.some(pattern => pattern.test(cleaned));
+    
+    if (!isValid) {
+      // Provide helpful error messages based on what user entered
+      if (digitsOnly.length < 10) {
+        return {
+          isValid: false,
+          message: 'Phone number too short. Minimum 10 digits required.'
+        };
+      } else if (digitsOnly.length > 15) {
+        return {
+          isValid: false,
+          message: 'Phone number too long. Maximum 15 digits allowed.'
+        };
+      } else if (cleaned.startsWith('08') && cleaned.length < 11) {
+        return {
+          isValid: false,
+          message: 'Indonesian mobile numbers should be 11-13 digits (08xxxxxxxxx)'
+        };
+      } else if (cleaned.startsWith('0') && !cleaned.startsWith('08')) {
+        return {
+          isValid: false,
+          message: 'Indonesian landline numbers should be 10-12 digits (02xxxxxxxx, 021xxxxxxx, etc.)'
+        };
+      } else {
+        return {
+          isValid: false,
+          message: 'Please enter a valid Indonesian phone number. Examples: 08123456789, +628123456789, 02112345678'
+        };
+      }
+    }
+    
+    return { isValid: true };
+  }
+  
+  validateDate(dateString) {
+    const selectedDate = new Date(dateString);
+    const today = new Date();
+    const maxDate = new Date();
+    maxDate.setMonth(maxDate.getMonth() + 3); // 3 months ahead
+    
+    today.setHours(0, 0, 0, 0);
+    selectedDate.setHours(0, 0, 0, 0);
+    
+    if (selectedDate < today) {
+      return { isValid: false, message: 'Reservation date cannot be in the past' };
+    }
+    
+    if (selectedDate > maxDate) {
+      return { isValid: false, message: 'Reservation date cannot be more than 3 months ahead' };
+    }
+    
+    // Check if selected date is not a Monday (restaurant closed)
+    if (selectedDate.getDay() === 1) {
+      return { isValid: false, message: 'Sorry, we are closed on Mondays' };
+    }
+    
+    return { isValid: true };
+  }
+  
+  applyValidationResult(field, isValid, errorMessage) {
+    const formGroup = field.parentElement;
+    const errorElement = formGroup.querySelector('.error-text');
+    const successElement = formGroup.querySelector('.success-text');
+    const iconElement = formGroup.querySelector('.validation-icon');
+    
+    // Clear previous states
+    formGroup.classList.remove('error', 'success');
+    
+    if (isValid && field.value.trim() !== '') {
+      // Success state
+      formGroup.classList.add('success');
+      
+      if (errorElement) {
+        errorElement.style.display = 'none';
+      }
+      
+      if (successElement) {
+        successElement.textContent = '✓ Valid';
+        successElement.style.display = 'block';
+      }
+      
+      if (iconElement) {
+        iconElement.textContent = '✓';
+        iconElement.className = 'validation-icon success';
+        iconElement.style.display = 'block';
+      }
+      
+    } else if (!isValid) {
+      // Error state
+      formGroup.classList.add('error');
+      
+      if (errorElement) {
+        errorElement.textContent = errorMessage;
+        errorElement.style.display = 'block';
+      }
+      
+      if (successElement) {
+        successElement.style.display = 'none';
+      }
+      
+      if (iconElement) {
+        iconElement.textContent = '✗';
+        iconElement.className = 'validation-icon error';
+        iconElement.style.display = 'block';
+      }
+    }
+  }
+  
+  clearFieldValidation(field) {
+    const formGroup = field.parentElement;
+    const errorElement = formGroup.querySelector('.error-text');
+    const successElement = formGroup.querySelector('.success-text');
+    const iconElement = formGroup.querySelector('.validation-icon');
+    
+    formGroup.classList.remove('error', 'success');
+    
+    if (errorElement) errorElement.style.display = 'none';
+    if (successElement) successElement.style.display = 'none';
+    if (iconElement) iconElement.style.display = 'none';
+  }
+  
+  updateProgress() {
+    let completedFields = 0;
+    const totalFields = this.formState.totalFields;
+    
+    // Check each required field
+    Object.keys(this.validationRules).forEach(fieldName => {
+      const field = document.getElementById(fieldName);
+      if (field && this.validateField(field, fieldName)) {
+        completedFields++;
+      }
+    });
+    
+    // Update progress bar
+    const progress = (completedFields / totalFields) * 100;
+    this.progressBar.style.width = `${progress}%`;
+    
+    // Update step indicators
+    this.updateStepIndicators(progress);
+    
+    this.formState.completedFields = completedFields;
+    this.formState.isValid = completedFields === totalFields;
+  }
+  
+  updateStepIndicators(progress) {
+    const steps = document.querySelectorAll('.step');
+    
+    steps.forEach((step, index) => {
+      step.classList.remove('active', 'completed');
+      
+      if (progress >= (index + 1) * 25) {
+        step.classList.add('completed');
+      } else if (progress >= index * 25) {
+        step.classList.add('active');
+      }
+    });
+  }
+  
+  updateSubmitButton() {
+    const isFormValid = this.checkFormValidity();
+    const termsAccepted = document.getElementById('terms').checked;
+    
+    this.submitBtn.disabled = !(isFormValid && termsAccepted);
+    
+    if (isFormValid && termsAccepted) {
+      this.submitBtn.textContent = 'Complete Reservation';
+      this.submitBtn.style.background = 'linear-gradient(135deg, #4CAF50, #243352)';
+    } else {
+      this.submitBtn.textContent = 'Please complete all fields';
+      this.submitBtn.style.background = '#ccc';
+    }
+  }
+  
+  checkFormValidity() {
+    let isValid = true;
+    
+    Object.keys(this.validationRules).forEach(fieldName => {
+      const field = document.getElementById(fieldName);
+      if (field && !this.validateField(field, fieldName)) {
+        isValid = false;
+      }
+    });
+    
+    return isValid;
+  }
+  
+  validateTerms(termsCheckbox) {
+    const formGroup = termsCheckbox.closest('.form-group');
+    const errorElement = formGroup.querySelector('.error-text');
+    
+    if (!termsCheckbox.checked) {
+      formGroup.classList.add('error');
+      if (errorElement) {
+        errorElement.textContent = 'You must agree to the terms and conditions';
+        errorElement.style.display = 'block';
+      }
+    } else {
+      formGroup.classList.remove('error');
+      if (errorElement) {
+        errorElement.style.display = 'none';
+      }
+    }
+  }
+  
+  setupDateConstraints() {
+    const dateField = document.getElementById('tanggal');
+    const today = new Date();
+    const maxDate = new Date();
+    
+    maxDate.setMonth(maxDate.getMonth() + 3);
+    
+    dateField.min = today.toISOString().split('T')[0];
+    dateField.max = maxDate.toISOString().split('T')[0];
+  }
+  
+  setupCharacterCounter() {
+    const textarea = document.getElementById('catatan');
+    const counter = document.getElementById('catatanCounter');
+    
+    textarea.addEventListener('input', () => {
+      const length = textarea.value.length;
+      const maxLength = parseInt(textarea.getAttribute('maxlength'));
+      
+      counter.textContent = `${length}/${maxLength} characters`;
+      
+      if (length > maxLength * 0.9) {
+        counter.style.color = '#ff4444';
+      } else if (length > maxLength * 0.7) {
+        counter.style.color = '#ff9800';
+      } else {
+        counter.style.color = '#888';
+      }
+    });
+  }
+  
+  setupTooltips() {
+    const tooltips = document.querySelectorAll('.tooltip');
+    
+    tooltips.forEach(tooltip => {
+      tooltip.addEventListener('mouseenter', () => {
+        this.showTooltip(tooltip);
+      });
+      
+      tooltip.addEventListener('mouseleave', () => {
+        this.hideTooltip(tooltip);
+      });
+    });
+  }
+  
+  formatPhoneNumber(event) {
+    let value = event.target.value;
+    
+    // Allow user to type freely but provide suggestions
+    // Remove all non-digit characters except + for formatting
+    const digitsOnly = value.replace(/\D/g, '');
+    
+    // Don't format if user is typing +62 or similar international formats
+    if (value.includes('+') || value.startsWith('62')) {
+      return; // Let user type freely for international formats
+    }
+    
+    // Only auto-format Indonesian mobile numbers starting with 08
+    if (digitsOnly.startsWith('08') && digitsOnly.length >= 4) {
+      // Format as 08XX-XXXX-XXXX for better readability
+      let formatted = digitsOnly.substring(0, 4);
+      
+      if (digitsOnly.length > 4) {
+        formatted += '-' + digitsOnly.substring(4, 8);
+      }
+      
+      if (digitsOnly.length > 8) {
+        formatted += '-' + digitsOnly.substring(8, 12);
+      }
+      
+      // Only apply formatting if it's actually helpful
+      if (formatted !== value && digitsOnly.length >= 4) {
+        event.target.value = formatted;
+      }
+    }
+  }
+  
+  updateAvailableTimeSlots(selectedDate) {
+    const timeSelect = document.getElementById('waktu');
+    const selectedDateObj = new Date(selectedDate);
+    
+    // Clear existing options except the first one
+    timeSelect.innerHTML = '<option value="">Select Time</option>';
+    
+    // Different time slots for different days
+    let timeSlots = [];
+    
+    if (selectedDateObj.getDay() === 0) { // Sunday
+      timeSlots = ['17.00', '18.00', '19.00', '20.00'];
+    } else if (selectedDateObj.getDay() === 6) { // Saturday
+      timeSlots = ['17.00', '18.00', '19.00', '20.00', '21.00', '22.00'];
+    } else { // Weekdays
+      timeSlots = ['17.00', '18.00', '19.00', '20.00', '21.00'];
+    }
+    
+    timeSlots.forEach(time => {
+      const option = document.createElement('option');
+      option.value = time;
+      option.textContent = time;
+      timeSelect.appendChild(option);
+    });
+    
+    this.showNotification(`Available time slots updated for ${selectedDateObj.toLocaleDateString()}`, 'info');
+  }
+  
+  recommendSeatingArea(numberOfPeople) {
+    const areaSelect = document.getElementById('area');
+    const options = areaSelect.querySelectorAll('option');
+    
+    // Reset all options
+    options.forEach(option => {
+      option.style.backgroundColor = '';
+      option.style.fontWeight = '';
+    });
+    
+    // Recommend based on group size
+    let recommendedArea = '';
+    
+    if (numberOfPeople <= 2) {
+      recommendedArea = 'Indoor Elegan';
+    } else if (numberOfPeople <= 4) {
+      recommendedArea = 'Outdoor Sunset';
+    } else {
+      recommendedArea = 'Gazebo Private';
+    }
+    
+    // Highlight recommended option
+    options.forEach(option => {
+      if (option.value === recommendedArea) {
+        option.style.backgroundColor = '#e8f5e8';
+        option.style.fontWeight = 'bold';
+        option.textContent = `${option.value} (Recommended)`;
+      }
+    });
+    
+    this.showNotification(`${recommendedArea} is recommended for ${numberOfPeople} people`, 'info');
+  }
+  
+  suggestEmailFromName(name) {
+    const emailField = document.getElementById('email');
+    
+    if (!emailField.value && name.length > 3) {
+      const suggestions = this.generateEmailSuggestions(name);
+      this.showEmailSuggestions(emailField, suggestions);
+    }
+  }
+  
+  generateEmailSuggestions(name) {
+    const cleanName = name.toLowerCase().replace(/\s+/g, '');
+    const domains = ['gmail.com', 'yahoo.com', 'hotmail.com'];
+    
+    return domains.map(domain => `${cleanName}@${domain}`);
+  }
+  
+  showEmailSuggestions(emailField, suggestions) {
+    // Remove existing suggestions
+    const existingSuggestions = document.querySelector('.email-suggestions');
+    if (existingSuggestions) {
+      existingSuggestions.remove();
+    }
+    
+    // Create suggestion dropdown
+    const suggestionDiv = document.createElement('div');
+    suggestionDiv.className = 'email-suggestions';
+    suggestionDiv.style.cssText = `
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      z-index: 1000;
+      max-height: 150px;
+      overflow-y: auto;
+    `;
+    
+    suggestions.forEach(email => {
+      const suggestion = document.createElement('div');
+      suggestion.textContent = email;
+      suggestion.style.cssText = `
+        padding: 10px;
+        cursor: pointer;
+        border-bottom: 1px solid #eee;
+        transition: background-color 0.2s;
+      `;
+      
+      suggestion.addEventListener('mouseenter', () => {
+        suggestion.style.backgroundColor = '#f0f0f0';
+      });
+      
+      suggestion.addEventListener('mouseleave', () => {
+        suggestion.style.backgroundColor = '';
+      });
+      
+      suggestion.addEventListener('click', () => {
+        emailField.value = email;
+        suggestionDiv.remove();
+        this.validateField(emailField, 'email');
+      });
+      
+      suggestionDiv.appendChild(suggestion);
+    });
+    
+    emailField.parentElement.style.position = 'relative';
+    emailField.parentElement.appendChild(suggestionDiv);
+    
+    // Remove suggestions when clicking outside
+    setTimeout(() => {
+      document.addEventListener('click', (e) => {
+        if (!emailField.parentElement.contains(e.target)) {
+          suggestionDiv.remove();
+        }
+      }, { once: true });
+    }, 100);
+  }
+  
+  showNotification(message, type = 'info') {
+    const notification = document.createElement('div');
+    notification.className = `notification ${type}`;
+    notification.style.cssText = `
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 15px 20px;
+      border-radius: 8px;
+      color: white;
+      font-size: 14px;
+      z-index: 10000;
+      animation: slideInRight 0.3s ease;
+      max-width: 300px;
+    `;
+    
+    switch(type) {
+      case 'success':
+        notification.style.backgroundColor = '#4CAF50';
+        break;
+      case 'error':
+        notification.style.backgroundColor = '#f44336';
+        break;
+      case 'info':
+        notification.style.backgroundColor = '#2196F3';
+        break;
+      default:
+        notification.style.backgroundColor = '#666';
+    }
+    
+    notification.textContent = message;
+    document.body.appendChild(notification);
+    
+    setTimeout(() => {
+      notification.style.animation = 'slideOutRight 0.3s ease';
+      setTimeout(() => {
+        if (notification.parentNode) {
+          notification.parentNode.removeChild(notification);
+        }
+      }, 300);
+    }, 3000);
+  }
+  
+  getFieldLabel(fieldName) {
+    const field = document.getElementById(fieldName);
+    const label = field.previousElementSibling;
+    return label ? label.textContent.replace('ℹ️', '').trim() : fieldName;
+  }
+  
+  initializeFormState() {
+    // Set initial button state
+    this.updateSubmitButton();
+    
+    // Add keyframes for animations
+    this.addAnimationKeyframes();
+  }
+  
+  addAnimationKeyframes() {
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes slideInRight {
+        from { transform: translateX(100%); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+      }
+      
+      @keyframes slideOutRight {
+        from { transform: translateX(0); opacity: 1; }
+        to { transform: translateX(100%); opacity: 0; }
+      }
+      
+      .form-group.focused {
+        transform: translateY(-2px);
+        transition: transform 0.2s ease;
+      }
+    `;
+    document.head.appendChild(style);
+  }
+  
+  async handleFormSubmit(e) {
+    e.preventDefault();
+    
+    // Final validation before submission
+    if (!this.checkFormValidity()) {
+      this.showNotification('Please correct all errors before submitting', 'error');
+      return;
+    }
+    
+    if (!document.getElementById('terms').checked) {
+      this.showNotification('Please agree to the terms and conditions', 'error');
+      return;
+    }
+    
+    // Set loading state
+    this.submitBtn.disabled = true;
+    this.submitBtn.classList.add('btn-loading');
+    this.submitBtn.textContent = '';
+    this.form.classList.add('loading');
+    
+    // Collect form data
+    const data = {
+      nama: document.getElementById('nama').value,
+      email: document.getElementById('email').value,
+      telepon: document.getElementById('telepon').value,
+      tanggal: document.getElementById('tanggal').value,
+      waktu: document.getElementById('waktu').value,
+      jumlah: parseInt(document.getElementById('jumlah').value),
+      area: document.getElementById('area').value,
+      chef_menu: document.querySelector('input[name="chef_menu"]').checked ? 1 : 0,
+      live_performance: document.querySelector('input[name="live_performance"]').checked ? 1 : 0,
+      sunset_terrace: document.querySelector('input[name="sunset_terrace"]').checked ? 1 : 0,
+      private_gazebo: document.querySelector('input[name="private_gazebo"]').checked ? 1 : 0,
+      catatan: document.getElementById('catatan').value
+    };
+
+    try {
+      console.log('Sending data:', data);
+      this.showNotification('Submitting your reservation...', 'info');
+      
+      // Try file-based API first, fallback to database API
+      const apiUrl = 'api_file_storage.php';
+      
+      const response = await fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify(data)
+      });
+
+      console.log(`Response status:`, response.status);
+      
+      if (!response.ok) {
+        const errorText = await response.text();
+        console.log('Error response:', errorText);
+        throw new Error(`HTTP ${response.status}: ${errorText}`);
+      }
+
+      const contentType = response.headers.get('content-type');
+      if (!contentType || !contentType.includes('application/json')) {
+        const responseText = await response.text();
+        console.log('Non-JSON response:', responseText);
+        throw new Error('Server returned non-JSON response');
+      }
+
+      const result = await response.json();
+      console.log('Response data:', result);
+      
+      if (result.success) {
+        this.showCustomAlert('success', {
+          title: 'Reservation Confirmed!',
+          message: 'Your table has been successfully reserved at Ocean Grace Restaurant.',
+          details: {
+            'Reservation ID': result.id,
+            'Name': data.nama,
+            'Date': new Date(data.tanggal).toLocaleDateString('en-US', { 
+              weekday: 'long', 
+              year: 'numeric', 
+              month: 'long', 
+              day: 'numeric' 
+            }),
+            'Time': data.waktu,
+            'Guests': data.jumlah + ' people',
+            'Area': data.area
+          }
+        });
+        this.resetForm();
+      } else {
+        throw new Error(result.message || 'Unknown error from API');
+      }
+      
+    } catch (error) {
+      console.error('Error:', error);
+      this.showCustomAlert('error', {
+        title: 'Reservation Failed',
+        message: 'We encountered an issue while processing your reservation. Please try again or contact us directly.',
+        details: {
+          'Error': error.message,
+          'Time': new Date().toLocaleString(),
+          'Contact': '📞 (555) 123-OCEAN',
+          'Email': '✉️ info@oceangrace.co'
+        }
+      });
+    } finally {
+      // Reset button state
+      this.submitBtn.disabled = false;
+      this.submitBtn.classList.remove('btn-loading');
+      this.submitBtn.textContent = 'Complete Reservation';
+      this.form.classList.remove('loading');
+    }
+  }
+  
+  resetForm() {
+    this.form.reset();
+    
+    // Clear all validation states
+    const formGroups = this.form.querySelectorAll('.form-group');
+    formGroups.forEach(group => {
+      group.classList.remove('error', 'success');
+      const errorElement = group.querySelector('.error-text');
+      const successElement = group.querySelector('.success-text');
+      const iconElement = group.querySelector('.validation-icon');
+      
+      if (errorElement) errorElement.style.display = 'none';
+      if (successElement) successElement.style.display = 'none';
+      if (iconElement) iconElement.style.display = 'none';
+    });
+    
+    // Reset progress
+    this.progressBar.style.width = '0%';
+    
+    // Reset step indicators
+    const steps = document.querySelectorAll('.step');
+    steps.forEach((step, index) => {
+      step.classList.remove('active', 'completed');
+      if (index === 0) step.classList.add('active');
+    });
+    
+    // Reset submit button
+    this.updateSubmitButton();
+    
+    // Reset character counter
+    document.getElementById('catatanCounter').textContent = '0/500 characters';
+  }
+  
+  showSuccessMessage(message) {
+    const successDiv = document.getElementById('successMessage');
+    const errorDiv = document.getElementById('errorMessage');
+    
+    successDiv.textContent = message;
+    successDiv.style.display = 'block';
+    errorDiv.style.display = 'none';
+    
+    window.scrollTo(0, 0);
+    
+    setTimeout(() => {
+      successDiv.style.display = 'none';
+    }, 8000);
+  }
+  
+  showErrorMessage(message) {
+    const errorDiv = document.getElementById('errorMessage');
+    const successDiv = document.getElementById('successMessage');
+    
+    errorDiv.textContent = message;
+    errorDiv.style.display = 'block';
+    successDiv.style.display = 'none';
+    
+    window.scrollTo(0, 0);
+    
+    setTimeout(() => {
+      errorDiv.style.display = 'none';
+    }, 8000);
+  }
+  
+  showCustomAlert(type, config) {
+    // Remove existing alert if any
+    const existingAlert = document.querySelector('.custom-alert');
+    if (existingAlert) {
+      existingAlert.remove();
+    }
+    
+    // Create alert overlay
+    const alertOverlay = document.createElement('div');
+    alertOverlay.className = 'custom-alert';
+    
+    // Create alert content
+    const alertContent = document.createElement('div');
+    alertContent.className = 'alert-content';
+    
+    // Add confetti for success
+    if (type === 'success') {
+      this.addConfetti(alertContent);
+    }
+    
+    // Icon mapping
+    const iconMap = {
+      success: '🎉',
+      error: '❌',
+      info: 'ℹ️',
+      warning: '⚠️'
+    };
+    
+    // Build alert HTML
+    alertContent.innerHTML = `
+      <div class="alert-icon ${type}">${iconMap[type] || '🔔'}</div>
+      <div class="alert-title">${config.title || 'Notification'}</div>
+      <div class="alert-message">${config.message || ''}</div>
+      ${config.details ? this.buildDetailsHTML(config.details) : ''}
+      <div class="alert-buttons">
+        ${this.buildButtonsHTML(type)}
+      </div>
+    `;
+    
+    alertOverlay.appendChild(alertContent);
+    document.body.appendChild(alertOverlay);
+    
+    // Show alert with animation
+    requestAnimationFrame(() => {
+      alertOverlay.classList.add('show');
+    });
+    
+    // Add event listeners
+    this.setupAlertEventListeners(alertOverlay, type);
+    
+    // Auto-hide for info/warning (not for success/error)
+    if (type === 'info' || type === 'warning') {
+      setTimeout(() => {
+        this.hideCustomAlert(alertOverlay);
+      }, 8000);
+    }
+  }
+  
+  buildDetailsHTML(details) {
+    if (!details || Object.keys(details).length === 0) return '';
+    
+    const detailItems = Object.entries(details)
+      .map(([key, value]) => `
+        <div class="alert-detail-item">
+          <span class="alert-detail-label">${key}:</span>
+          <span class="alert-detail-value">${value}</span>
+        </div>
+      `).join('');
+    
+    return `
+      <div class="alert-details">
+        ${detailItems}
+      </div>
+    `;
+  }
+  
+  buildButtonsHTML(type) {
+    if (type === 'success') {
+      return `
+        <button class="alert-btn primary" data-action="new-reservation">
+          🍽️ New Reservation
+        </button>
+        <button class="alert-btn secondary" data-action="close">
+          ✓ Got it
+        </button>
+      `;
+    } else if (type === 'error') {
+      return `
+        <button class="alert-btn primary" data-action="retry">
+          🔄 Try Again
+        </button>
+        <button class="alert-btn secondary" data-action="contact">
+          📞 Contact Us
+        </button>
+        <button class="alert-btn secondary" data-action="close">
+          ✗ Close
+        </button>
+      `;
+    } else {
+      return `
+        <button class="alert-btn primary" data-action="close">
+          ✓ OK
+        </button>
+      `;
+    }
+  }
+  
+  setupAlertEventListeners(alertOverlay, type) {
+    const buttons = alertOverlay.querySelectorAll('.alert-btn');
+    
+    buttons.forEach(button => {
+      button.addEventListener('click', (e) => {
+        const action = e.target.getAttribute('data-action');
+        this.handleAlertAction(action, alertOverlay, type);
+      });
+    });
+    
+    // Close on overlay click
+    alertOverlay.addEventListener('click', (e) => {
+      if (e.target === alertOverlay) {
+        this.hideCustomAlert(alertOverlay);
+      }
+    });
+    
+    // Close on Escape key
+    const escapeHandler = (e) => {
+      if (e.key === 'Escape') {
+        this.hideCustomAlert(alertOverlay);
+        document.removeEventListener('keydown', escapeHandler);
+      }
+    };
+    document.addEventListener('keydown', escapeHandler);
+  }
+  
+  handleAlertAction(action, alertOverlay, type) {
+    switch (action) {
+      case 'close':
+        this.hideCustomAlert(alertOverlay);
+        break;
+        
+      case 'new-reservation':
+        this.hideCustomAlert(alertOverlay);
+        // Form is already reset, just scroll to top
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        document.getElementById('nama').focus();
+        break;
+        
+      case 'retry':
+        this.hideCustomAlert(alertOverlay);
+        // Focus on the submit button to retry
+        this.submitBtn.focus();
+        break;
+        
+      case 'contact':
+        this.hideCustomAlert(alertOverlay);
+        // Open contact methods
+        this.showContactOptions();
+        break;
+        
+      default:
+        this.hideCustomAlert(alertOverlay);
+    }
+  }
+  
+  hideCustomAlert(alertOverlay) {
+    alertOverlay.classList.remove('show');
+    setTimeout(() => {
+      if (alertOverlay.parentNode) {
+        alertOverlay.parentNode.removeChild(alertOverlay);
+      }
+    }, 300);
+  }
+  
+  addConfetti(container) {
+    // Create confetti elements
+    for (let i = 0; i < 9; i++) {
+      const confetti = document.createElement('div');
+      confetti.className = 'confetti';
+      container.appendChild(confetti);
+    }
+    
+    // Remove confetti after animation
+    setTimeout(() => {
+      const confettiElements = container.querySelectorAll('.confetti');
+      confettiElements.forEach(element => {
+        if (element.parentNode) {
+          element.parentNode.removeChild(element);
+        }
+      });
+    }, 3000);
+  }
+  
+  showContactOptions() {
+    const contactAlert = document.createElement('div');
+    contactAlert.className = 'custom-alert show';
+    
+    contactAlert.innerHTML = `
+      <div class="alert-content">
+        <div class="alert-icon info">📞</div>
+        <div class="alert-title">Contact Ocean Grace</div>
+        <div class="alert-message">Choose your preferred contact method:</div>
+        <div class="alert-buttons" style="flex-direction: column; gap: 10px;">
+          <a href="tel:+1234567890" class="alert-btn primary">
+            📞 Call Now: (555) 123-OCEAN
+          </a>
+          <a href="mailto:info@oceangrace.co" class="alert-btn primary">
+            ✉️ Email: info@oceangrace.co
+          </a>
+          <a href="https://wa.me/1234567890" class="alert-btn primary" target="_blank">
+            💬 WhatsApp: +1 (234) 567-890
+          </a>
+          <button class="alert-btn secondary" onclick="this.closest('.custom-alert').remove()">
+            ✗ Close
+          </button>
+        </div>
+      </div>
+    `;
+    
+    document.body.appendChild(contactAlert);
+    
+    // Auto-remove after 10 seconds
+    setTimeout(() => {
+      if (contactAlert.parentNode) {
+        contactAlert.remove();
+      }
+    }, 10000);
+  }
+}
+
+// Initialize the form when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+  new OceanGraceReservationForm();
+});
+</script>
+
+</body>
+</html>
